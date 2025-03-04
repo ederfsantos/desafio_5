@@ -4,76 +4,47 @@ let listaDeLaticinios = [];
 let listaDeCongelados = [];
 let listaDeDoces = [];
 let listaDeBebidas = [];
-let listaDeTodosItens = [];
 let resposta = "SIM";//iniciando a variavel para entrar no laço do while
 
 do {
     resposta = prompt("Você deseja adicionar uma comida na sua lista de compras? Sim ou Nao");
     resposta = resposta.toUpperCase();//deixando tudo maiusculo para commparação, caso usuario digite minusculo
-   // alert(resposta);
+
     if (resposta == "SIM") {
         let comida = prompt("Qual comida você deseja inserir?");
-        let categoria = parseInt(prompt("Em qual categoria essa comida se encaixa?\nEscolha uma opção:\n[0] Frutas, [1] Laticínios," +
-            " [2] Congelados, [3] Doces, [4] Bebidas"));
+        let categoria = parseInt(prompt("Em qual categoria essa comida se encaixa?\nEscolha uma opção:\n[1] Frutas, [2] Laticínios," +
+            " [3] Congelados, [4] Doces, [5] Bebidas"));
 
-        if (categoria == 0) {
+        if (categoria == 1) {
             listaDeFrutas.push(comida);
         }
-        if (categoria == 1) {
+        if (categoria == 2) {
             listaDeLaticinios.push(comida);
 
         }
-        if (categoria == 2) {
+        if (categoria == 3) {
             listaDeCongelados.push(comida);
 
         }
-        if (categoria == 3) {
+        if (categoria == 4) {
             listaDeDoces.push(comida);
 
         }
-        if (categoria == 4) {
+        if (categoria == 5) {
             listaDeBebidas.push(comida);
 
         }
     }
 
 } while (resposta == "SIM");
-//listaDeTodosItens.push(listaDeFrutas);
-//listaDeTodosItens.push(listaDeLaticinios);
-//listaDeTodosItens.push(listaDeCongelados);
-//listaDeTodosItens.push(listaDeDoces);
-//listaDeTodosItens.push(listaDeBebidas);
 
-
+/*chamando a função para exibir as listas */
 exibirListaDeCompras();
 
-
-/*
-for (let x = 0; x < listaDeCategorias.length; x++) {
-    for (let z = 0; z < listaDeTodosItens.length; z++) {
-        exibirListaDeCompras(listaDeCategorias[x], listaDeTodosItens[z]);
-    }
-}
-
-
-
-function exibirListaDeCompras(categoria, lista) {
-    let itens = categoria + ": ";
-    for (let i = 0; i < lista.length; i++) {
-        itens += lista[i] + ",";
-    }
-    alert(itens);
-}
-*/
-
 function exibirListaDeCompras() {
-    alert("Sua Lista de compras!\nDoces: " + listaDeDoces +"\nBebidas: " + listaDeBebidas + "\n"
-       +"Congelados: " + listaDeCongelados + "\nFrutas: " + listaDeFrutas + "\nLaticínios: " + listaDeLaticinios);
-   // alert(listaDeBebidas);
-   // alert(listaDeCongelados);
-  //  alert(listaDeDoces);
-  //  alert(listaDeFrutas);
- //   alert(listaDeLaticinios);
+    alert("Sua Lista de compras!\nDoces: " + listaDeDoces + "\nBebidas: " + listaDeBebidas + "\n"
+        + "Congelados: " + listaDeCongelados + "\nFrutas: " + listaDeFrutas + "\nLaticínios: " + listaDeLaticinios);
+
 
 }
 
