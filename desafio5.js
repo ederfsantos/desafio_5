@@ -4,7 +4,8 @@ let listaDeLaticinios = [];
 let listaDeCongelados = [];
 let listaDeDoces = [];
 let listaDeBebidas = [];
-let resposta = "SIM";//iniciando a variavel para entrar no laço do while
+let resposta;
+
 
 do {
     resposta = prompt("Você deseja adicionar uma comida na sua lista de compras? Sim ou Nao");
@@ -45,6 +46,7 @@ function exibirListaDeCompras() {
     alert("Sua Lista de compras!\nDoces: " + listaDeDoces + "\nBebidas: " + listaDeBebidas + "\n"
         + "Congelados: " + listaDeCongelados + "\nFrutas: " + listaDeFrutas + "\nLaticínios: " + listaDeLaticinios);
 
+        
 
 }
 
