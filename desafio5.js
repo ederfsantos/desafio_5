@@ -1,4 +1,4 @@
-let listaDeCategorias = ["Frutas", "Laticínios", "Congelados", "Doces", "Bebidas"];
+/*declaração das listas(arrays)*/
 let listaDeFrutas = [];
 let listaDeLaticinios = [];
 let listaDeCongelados = [];
@@ -8,7 +8,7 @@ let resposta = "SIM";//iniciando a variavel para entrar no laço do while
 
 do {
     resposta = prompt("Você deseja adicionar uma comida na sua lista de compras? Sim ou Nao");
-    resposta = resposta.toUpperCase();//deixando tudo maiusculo para commparação, caso usuario digite minusculo
+    resposta = resposta.toUpperCase();//deixando tudo maiusculo para comparação, caso usuario digite minusculo
 
     if (resposta == "SIM") {
         let comida = prompt("Qual comida você deseja inserir?");
